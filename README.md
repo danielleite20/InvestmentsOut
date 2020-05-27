@@ -3,7 +3,7 @@
  Preparação de Dados para Modelos de aplicação - Resumo criado em [C#](http://startbootstrap.com/), [Excel](https://docs.microsoft.com/pt-br/dotnet/csharp/) e [SqlServer](https://www.microsoft.com/pt-br/sql-server/sql-server-2019)
  
  
- Este tema apresenta o código da aplicação para realizar a importação de dados de uma arquivo excel extraído do site da [Bolsa de Valores].
+ Este tema apresenta o código da aplicação para realizar a importação de dados de uma arquivo excel extraído do site da [Bolsa de Valores](http://www.b3.com.br/pt_br/).
 
 
 ## Status
@@ -32,7 +32,7 @@ Estes são as atenções devidas que você deve tomar antes de executar o programa.
 Após o programa ser executado no Visual Studio, abrirá a janela para escolher o arquivo a ser importado, este arquivo excel deve ser interpretado de acordo com as normas do site da B3. (http://www.bmfbovespa.com.br/pt_br/servicos/market-data/historico/mercado-a-vista/cotacoes-historicas/)
 Após essa interpretação basta anexar o arquivo com o BUTTOM disponível, e clicar em "import".
 
-##Bugs e Problemas
+## Bugs e Problemas
 
 Tem um bug ou um problema com este modelo? [Abra uma nova edição](https://github.com/danielleite20/InvestmentsOut/issues) aqui no GitHub.
 
