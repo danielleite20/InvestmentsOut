@@ -27,7 +27,6 @@ namespace ImportExcel {
                     Customer customer = new Customer
                     {
                         Tipreg = dt.Rows[i]["Tipreg"].ToString(),
-                        Datpreg = DateTime.ParseExact(dt.Rows[i]["Datpreg"].ToString(),"yyyyMMdd",CultureInfo.InvariantCulture).Date,
                         Codbdi = dt.Rows[i]["Codbdi"].ToString(),
                         Codneg = dt.Rows[i]["Codneg"].ToString(),
                         Tpmerc = dt.Rows[i]["Tpmerc"].ToString(),
@@ -42,17 +41,28 @@ namespace ImportExcel {
                         Preult = decimal.Parse(dt.Rows[i]["Preult"].ToString()),
                         Preofc = decimal.Parse(dt.Rows[i]["Preofc"].ToString()),
                         Preofv = decimal.Parse(dt.Rows[i]["Preofv"].ToString()),
-                        Totneg = decimal.Parse(dt.Rows[i]["Totneg"].ToString()),
+                        Totneg = dt.Rows[i]["Totneg"].ToString(),
                         Quatot = dt.Rows[i]["Quatot"].ToString(),
                         Voltot = decimal.Parse(dt.Rows[i]["Voltot"].ToString()),
                         Preexe = decimal.Parse(dt.Rows[i]["Preexe"].ToString()),
                         Indopc = dt.Rows[i]["Indopc"].ToString(),
-                        Datven = DateTime.ParseExact(dt.Rows[i]["Datven"].ToString(),"yyyyMMdd",CultureInfo.InvariantCulture).Date,
                         Fatcot = dt.Rows[i]["Fatcot"].ToString(),
                         Ptoexe = decimal.Parse(dt.Rows[i]["Ptoexe"].ToString()),
                         Codisi = dt.Rows[i]["Codisi"].ToString(),
                         Dismes = decimal.Parse(dt.Rows[i]["Dismes"].ToString())
                     };
+
+                    if (DateTime.TryParseExact(dt.Rows[i]["Datven"].ToString(), "yyyyMMdd", null, DateTimeStyles.AssumeUniversal, out var datven) ||
+                        DateTime.TryParseExact(dt.Rows[i]["Datven"].ToString(), "dd/MM/yyyy hh.mm.ss", null, DateTimeStyles.None, out datven))
+                        {
+                            customer.Datven = datven;
+                        }
+                    
+                    if (DateTime.TryParseExact(dt.Rows[i]["Datpreg"].ToString(), "yyyyMMdd", null, DateTimeStyles.AssumeUniversal, out var datpreg) ||
+                        DateTime.TryParseExact(dt.Rows[i]["Datpreg"].ToString(), "dd/MM/yyyy hh.mm.ss", null, DateTimeStyles.None, out datpreg))
+                        {
+                            customer.Datpreg = datpreg;
+                        }
 
                     empresa.Add(customer);
                 }

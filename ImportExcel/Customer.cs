@@ -35,7 +35,7 @@ namespace ImportExcel {
 
         public decimal Preofv { get; set; }
 
-        public decimal Totneg { get; set; }
+        public string Totneg { get; set; }
 
         public string Quatot { get; set; }
 

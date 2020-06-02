@@ -1,6 +1,6 @@
 # [Preparação de Dados para Modelos de aplicação - Resumo]
 
- Preparação de Dados para Modelos de aplicação - Resumo criado em [C#](http://startbootstrap.com/), [Excel](https://docs.microsoft.com/pt-br/dotnet/csharp/) e [SqlServer](https://www.microsoft.com/pt-br/sql-server/sql-server-2019)
+ Preparação de Dados para Modelos de aplicação criado em [C#](http://startbootstrap.com/), [Excel](https://docs.microsoft.com/pt-br/dotnet/csharp/) e [SqlServer](https://www.microsoft.com/pt-br/sql-server/sql-server-2019)
  
  
  Este tema apresenta o código da aplicação para realizar a importação de dados de uma arquivo excel extraído do site da [Bolsa de Valores](http://www.b3.com.br/pt_br/).
