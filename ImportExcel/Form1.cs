@@ -25,7 +25,7 @@ namespace ImportExcel {
                 for(int i = 0;i < dt.Rows.Count;i++)
                 {
                     Customer customer = new Customer
-                    {
+                       {
                         Tipreg = dt.Rows[i]["Tipreg"].ToString(),
                         Codbdi = dt.Rows[i]["Codbdi"].ToString(),
                         Codneg = dt.Rows[i]["Codneg"].ToString(),
@@ -34,17 +34,17 @@ namespace ImportExcel {
                         Especi = dt.Rows[i]["Especi"].ToString(),
                         Prazot = dt.Rows[i]["Prazot"].ToString(),
                         Modref = dt.Rows[i]["Modref"].ToString(),
-                        Preabe = decimal.Parse(dt.Rows[i]["Preabe"].ToString()),
-                        Premax = decimal.Parse(dt.Rows[i]["Premax"].ToString()),
-                        Premin = decimal.Parse(dt.Rows[i]["Premin"].ToString()),
-                        Premed = decimal.Parse(dt.Rows[i]["Premed"].ToString()),
-                        Preult = decimal.Parse(dt.Rows[i]["Preult"].ToString()),
-                        Preofc = decimal.Parse(dt.Rows[i]["Preofc"].ToString()),
-                        Preofv = decimal.Parse(dt.Rows[i]["Preofv"].ToString()),
+                        Preabe = decimal.Parse(dt.Rows[i]["Preabe"].ToString())/100,
+                        Premax = decimal.Parse(dt.Rows[i]["Premax"].ToString())/100,
+                        Premin = decimal.Parse(dt.Rows[i]["Premin"].ToString())/100,
+                        Premed = decimal.Parse(dt.Rows[i]["Premed"].ToString())/100,
+                        Preult = decimal.Parse(dt.Rows[i]["Preult"].ToString())/100,
+                        Preofc = decimal.Parse(dt.Rows[i]["Preofc"].ToString())/100,
+                        Preofv = decimal.Parse(dt.Rows[i]["Preofv"].ToString())/100,
                         Totneg = dt.Rows[i]["Totneg"].ToString(),
                         Quatot = dt.Rows[i]["Quatot"].ToString(),
-                        Voltot = decimal.Parse(dt.Rows[i]["Voltot"].ToString()),
-                        Preexe = decimal.Parse(dt.Rows[i]["Preexe"].ToString()),
+                        Voltot = decimal.Parse(dt.Rows[i]["Voltot"].ToString())/100,
+                        Preexe = decimal.Parse(dt.Rows[i]["Preexe"].ToString())/100,
                         Indopc = dt.Rows[i]["Indopc"].ToString(),
                         Fatcot = dt.Rows[i]["Fatcot"].ToString(),
                         Ptoexe = decimal.Parse(dt.Rows[i]["Ptoexe"].ToString()),
